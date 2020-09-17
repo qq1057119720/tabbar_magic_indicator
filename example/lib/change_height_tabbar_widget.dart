@@ -29,9 +29,9 @@ SingleTickerProviderStateMixin {
   @override
   void initState() {
     super.initState();
-    tabs.add(MagicTab(text: "标签1",tabHeight: 25,));
-    tabs.add(MagicTab(text: "标签2",tabHeight: 25,));
-    tabs.add(MagicTab(text: "标签3",tabHeight: 25,));
+    tabs.add(MagicTab(text: "标签1",tabHeight: 45,));
+    tabs.add(MagicTab(text: "标签2",tabHeight: 45,));
+    tabs.add(MagicTab(text: "标签3",tabHeight: 45,));
     controller =
         TabController(initialIndex: 0, length: tabs.length, vsync: this);
   }
@@ -60,28 +60,27 @@ SingleTickerProviderStateMixin {
             children: <Widget>[
               Container(
                 width: 230,
-                decoration: BoxDecoration(
-                  border: Border.all(
-                      color: Colors.red,
-                      width: 1),
-                  borderRadius:BorderRadius.all(Radius.circular(2.5)),
-                ),
+//                decoration: BoxDecoration(
+//                  border: Border.all(
+//                      color: Colors.red,
+//                      width: 1),
+//                  borderRadius:BorderRadius.all(Radius.circular(2.5)),
+//                ),
                 child: MagicTabBar(
                   controller: controller,//可以和TabBarView使用同一个TabController
                   tabs: tabs,
-                  tabHeight: 25,
+                  tabHeight: 45,
                   isScrollable: false,
                   indicatorSize: MagicTabBarIndicatorSize.tab,
-                  labelColor: Colors.white,
+                  labelColor: Colors.black,
                   labelStyle: TextStyle(
                       fontSize: 12.0,
                       fontWeight: FontWeight.bold
                   ),
                   indicator: MagicIndicator( //it begins here
-                      indicatorHeight: 25,
+                      indicatorHeight: 4,
                       indicatorColor: Colors.red,
-                      radius: 2.5,
-                      indicatorSize: MagicIndicatorSize.round //3 different modes
+                      indicatorSize: MagicIndicatorSize.full //3 different modes
                   ),
                   unselectedLabelColor: Colors.black,
                   unselectedLabelStyle: TextStyle(

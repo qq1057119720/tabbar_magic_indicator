@@ -60,28 +60,27 @@ SingleTickerProviderStateMixin {
             children: <Widget>[
               Container(
                 width: 230,
-                decoration: BoxDecoration(
-                  border: Border.all(
-                      color: Colors.red,
-                      width: 1),
-                  borderRadius:BorderRadius.all(Radius.circular(2.5)),
-                ),
+//                decoration: BoxDecoration(
+//                  border: Border.all(
+//                      color: Colors.red,
+//                      width: 1),
+//                  borderRadius:BorderRadius.all(Radius.circular(2.5)),
+//                ),
                 child: MagicTabBar(
                   controller: controller,//可以和TabBarView使用同一个TabController
                   tabs: tabs,
                   tabHeight: 25,
                   isScrollable: false,
                   indicatorSize: MagicTabBarIndicatorSize.tab,
-                  labelColor: Colors.white,
+                  labelColor: Colors.black,
                   labelStyle: TextStyle(
                       fontSize: 12.0,
                       fontWeight: FontWeight.bold
                   ),
                   indicator: MagicIndicator( //it begins here
-                      indicatorHeight: 25,
+                      indicatorHeight: 2,
                       indicatorColor: Colors.red,
-                      radius: 2.5,
-                      indicatorSize: MagicIndicatorSize.round //3 different modes
+                      indicatorSize: MagicIndicatorSize.full //3 different modes
                   ),
                   unselectedLabelColor: Colors.black,
                   unselectedLabelStyle: TextStyle(
