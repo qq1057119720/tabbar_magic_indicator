@@ -3,7 +3,7 @@ description: magic tabbar
 version: 0.0.1
 author: Guoxian Li
 homepage: https://yilanjingwang.blog.csdn.net
-
+repository: https://github.com/qq1057119720/tabbar_magic_indicator
 environment:
   sdk: ">=2.1.0 <3.0.0"
 
